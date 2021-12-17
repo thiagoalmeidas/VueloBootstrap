@@ -6,6 +6,7 @@
   - CRUD
   - Html
   - Css
+  - Javascript
 </p>
 diagama neste Link
 https://github.com/thiagoalmeidas/VueloBootstrap/blob/master/Modelos%20-%20VueloAgencia.pdf
