@@ -15,11 +15,11 @@ namespace VueloBootstrap.Controllers
         {
             var dbcontext = new Contexto();
 
-            /*var cliente = new Destino();
+            /*var destino = new Destino();
 
-            cliente.pais_destino = "Bélgica";
-            cliente.cidade_destino = "Bruxelas";
-            cliente.preco_destino = 1200;
+            destino.pais_destino = "Bélgica";
+            destino.cidade_destino = "Bruxelas";
+            destino.preco_destino = 1200;
 
             dbcontext.Add(destino);
             dbcontext.SaveChanges();*/
@@ -29,13 +29,39 @@ namespace VueloBootstrap.Controllers
         }
 
         [HttpPost]
-        [Route("Listar")]
-        public IActionResult Incluir(Destino destino)
+        public IActionResult Index(Destino destino)
         {
             var dbcontext = new Contexto();
             dbcontext.Add(destino);
             dbcontext.SaveChanges();
 
+            return RedirectToAction("Index");
+        }
+
+        [HttpPost]
+        public IActionResult Deletar(Destino destino)
+        {
+            var dbcontext = new Contexto();
+
+            var destinoDelete = dbcontext.Destinos.Find(destino.Id);
+            dbcontext.Remove(destinoDelete);
+            dbcontext.SaveChanges();
+
+            return RedirectToAction("Index");
+        }
+
+        [HttpPost]
+        public IActionResult Atualizar(Destino novosDadosDestino)
+        {
+            var dbcontext = new Contexto();
+
+            var antigosDadosDestino = dbcontext.Destinos.Find(novosDadosDestino.Id);
+
+            antigosDadosDestino.pais_destino = novosDadosDestino.pais_destino;
+            antigosDadosDestino.cidade_destino = novosDadosDestino.cidade_destino;
+            antigosDadosDestino.preco_destino = novosDadosDestino.preco_destino;
+
+            dbcontext.SaveChanges();
 
             return RedirectToAction("Index");
         }

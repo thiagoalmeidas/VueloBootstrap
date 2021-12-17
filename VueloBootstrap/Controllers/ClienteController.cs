@@ -6,11 +6,9 @@ using System.Linq;
 
 namespace VueloBootstrap.Controllers
 {
-    [Route("Cliente")]
     public class ClienteController : Controller
     {
         [HttpGet]
-        [Route("Listar")]
         public IActionResult Index()
         {
             var dbcontext = new Contexto();
@@ -30,13 +28,40 @@ namespace VueloBootstrap.Controllers
         }
 
         [HttpPost]
-        [Route("Listar")]
-        public IActionResult Incluir(Cliente cliente)
+        public IActionResult Index(Cliente cliente)
         {
             var dbcontext = new Contexto();
             dbcontext.Add(cliente);
             dbcontext.SaveChanges();
 
+            return RedirectToAction("Index");
+        }
+
+        [HttpPost]
+        public IActionResult Deletar(Cliente cliente)
+        {
+            var dbcontext = new Contexto();
+
+            var clienteDelete = dbcontext.Clientes.Find(cliente.Id);
+            dbcontext.Remove(clienteDelete);
+            dbcontext.SaveChanges();
+
+            return RedirectToAction("Index");
+        }
+
+        [HttpPost]
+        public IActionResult Atualizar(Cliente novosDadosCliente)
+        {
+            var dbcontext = new Contexto();
+
+            var antigosDadosCliente = dbcontext.Clientes.Find(novosDadosCliente.Id);
+
+            antigosDadosCliente.Nome = novosDadosCliente.Nome;
+            antigosDadosCliente.Email = novosDadosCliente.Email;
+            antigosDadosCliente.Telefone = novosDadosCliente.Telefone;
+            antigosDadosCliente.Endereco = novosDadosCliente.Endereco;
+
+            dbcontext.SaveChanges();
 
             return RedirectToAction("Index");
         }
