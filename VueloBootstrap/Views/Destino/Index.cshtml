@@ -1,0 +1,62 @@
+﻿@model VueloBootstrap.Models.Destino;
+@{
+    ViewData["Title"] = "Destino";
+    var destinos = ViewData["destinos"] as List<Destino>;
+}
+<h1>Gerenciamento de Destinos</h1>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-5">
+            <h2>Destinos Cadastrados</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Nome</th>
+                        <th>Email</th>
+                        <th>Telefone</th>
+                        <th>Endereço</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @{
+                        foreach (var destino in destinos)
+                        {
+                            <tr>
+                                <td>@destino.Id</td>
+                                <td>@destino.pais_destino</td>
+                                <td>@destino.cidade_destino</td>
+                                <td>@destino.preco_destino</td>
+                            </tr>
+                        }
+                    }
+                </tbody>
+            </table>
+
+            <h2>Cadastrar</h2>
+            <form asp-action="Index">
+                <div class="form-row">
+
+                    <div class="form-group col-md-6">
+                        <label for="">País</label>
+                        <input asp-for="pais_destino" type="text" class="form-control" id="" placeholder="País:" />
+                    </div>
+
+                    <div class="form-group col-md-6">
+                        <label for="">Cidade</label>
+                        <input asp-for="cidade_destino" type="text" class="form-control" id="" placeholder="Cidade:" />
+                    </div>
+
+                    <div class="form-group col-md-6">
+                        <label for="">Preco</label>
+                        <input asp-for="preco_destino" type="text" class="form-control" id="" placeholder="Preco:" />
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Incluir</button>
+
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
