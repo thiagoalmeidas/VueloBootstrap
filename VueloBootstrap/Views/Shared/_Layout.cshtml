@@ -29,7 +29,7 @@
                 <div class="menu">
                     <ul>
                         <li><a asp-area="" asp-controller="Home" asp-action="index"><img src="~/img/logotipo-vuelo-dark.svg" alt="logotipo vuelo" width="120px"></a></li>
-                        <li><a asp-area="" asp-controller="Cliente" asp-action="index">Admin</a></li>
+                        <li><a asp-area="" asp-controller="Cliente" asp-action="Index">Gerenciador</a></li>
                         <li><a asp-area="" asp-controller="Home" asp-action="destinos">Destinos</a></li>
                         <li><a asp-area="" asp-controller="Home" asp-action="promocoes">Promoções</a></li>
                         <li><a asp-area="" asp-controller="Home" asp-action="contato">Contato</a></li>
@@ -39,11 +39,12 @@
 
             <div class="menu-screen">
                 <ul>
-                    <li><a asp-area="" asp-controller="Home" asp-action="index">Home</a></li>
+                    <li><a asp-area="" asp-controller="Cliente" asp-action="Index">Gerenciador</a></li>
                     <li><a asp-area="" asp-controller="Home" asp-action="destinos">Destinos</a></li>
                     <li><a asp-area="" asp-controller="Home" asp-action="promocoes">Promoções</a></li>
                     <li><a asp-area="" asp-controller="Home" asp-action="contato">Contato</a></li>
-                    <li><a href="#"><img src="~/img/login-user-6.svg" alt="Login Usuário" width="20px"> Login</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="index"><img src="~/img/login-user-6.svg" alt="Login Usuário" width="20px"> Login</a></li>
+
                 </ul>
             </div>
         </nav>
