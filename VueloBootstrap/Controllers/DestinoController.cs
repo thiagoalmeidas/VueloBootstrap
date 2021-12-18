@@ -10,7 +10,6 @@ namespace VueloBootstrap.Controllers
     public class DestinoController : Controller
     {
         [HttpGet]
-        [Route("Listar")]
         public IActionResult Index()
         {
             var dbcontext = new Contexto();

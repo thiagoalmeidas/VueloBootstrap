@@ -1,22 +1,15 @@
 ﻿<Properties StartupConfiguration="{8C488D2B-46A1-475A-9E52-0BCE2F73CB8C}|Default">
   <MonoDevelop.Ide.ItemProperties.VueloBootstrap PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="VueloBootstrap/Data/Contexto.cs">
-    <Files>
-      <File FileName="VueloBootstrap/Controllers/ClienteController.cs" Line="25" Column="1" />
-      <File FileName="VueloBootstrap/Controllers/HomeController.cs" Line="1" Column="1" />
-      <File FileName="VueloBootstrap/Views/Shared/_Layout.cshtml" Line="35" Column="103" />
-      <File FileName="VueloBootstrap/Program.cs" Line="16" Column="1" />
-      <File FileName="VueloBootstrap/Data/Contexto.cs" Line="1" Column="1" />
-    </Files>
+  <MonoDevelop.Ide.Workbench>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="VueloBootstrap" expanded="True">
             <Node name="VueloBootstrap" expanded="True">
-              <Node name="Controllers" expanded="True" />
-              <Node name="Data" expanded="True">
-                <Node name="Contexto.cs" selected="True" />
+              <Node name="Controllers" expanded="True">
+                <Node name="ClienteController.cs" selected="True" />
               </Node>
+              <Node name="Data" expanded="True" />
               <Node name="Views" expanded="True">
                 <Node name="Shared" expanded="True" />
               </Node>

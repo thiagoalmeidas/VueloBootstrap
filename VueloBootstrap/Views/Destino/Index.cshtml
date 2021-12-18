@@ -9,14 +9,14 @@
     <div class="row">
         <div class="col-md-5">
             <h2>Destinos Cadastrados</h2>
-            <table>
+            <table class="table" style="color:#fff;">
                 <thead>
                     <tr>
                         <th>Id</th>
-                        <th>Nome</th>
-                        <th>Email</th>
-                        <th>Telefone</th>
-                        <th>Endereço</th>
+                        <th>País</th>
+                        <th>Cidade</th>
+                        <th>Preço</th>
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -72,7 +72,7 @@
             <form asp-controller="Destino" asp-action="Atualizar">
 
                 <div class="form-row">
-                    <div class="form-group col-md-3">
+                    <div class="form-group col-md-4">
                         <label for="">Código do destino</label>
                         <select class="custom-select" asp-for="Id">
                             <option selected>-- Selecione um código</option>
@@ -86,17 +86,17 @@
                     </div>
 
                     <div class="form-group col-md-6">
-                        <label for="">Nome</label>
+                        <label for="">País</label>
                         <input asp-for="pais_destino" type="text" class="form-control" id="" placeholder="Pais">
                     </div>
 
                     <div class="form-group col-md-3">
-                        <label for="">Email</label>
+                        <label for="">Cidade</label>
                         <input asp-for="cidade_destino" type="text" class="form-control" id="" placeholder="Cidade">
                     </div>
 
                     <div class="form-group col-md-3">
-                        <label for="">Telefone</label>
+                        <label for="">Preço</label>
                         <input asp-for="preco_destino" type="text" class="form-control" id="" placeholder="Preco">
                     </div>
 
