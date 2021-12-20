@@ -8,7 +8,9 @@
   - Css
   - Javascript
 </p>
-<p>--> Diagama neste Link
-https://github.com/thiagoalmeidas/VueloBootstrap/blob/master/Modelos%20-%20VueloAgencia.pdf<p/>
 
 <p>-->Parte 1 - https://github.com/thiagoalmeidas/agenciaViagens<p/>
+
+<p>--> Modelagem de dados neste Link
+https://github.com/thiagoalmeidas/VueloBootstrap/tree/master/Modelagem%20de%20Dados<p/>
+
