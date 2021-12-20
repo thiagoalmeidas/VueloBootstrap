@@ -6,12 +6,15 @@
         <State name="__root__">
           <Node name="VueloBootstrap" expanded="True">
             <Node name="VueloBootstrap" expanded="True">
-              <Node name="Controllers" expanded="True">
-                <Node name="ClienteController.cs" selected="True" />
-              </Node>
+              <Node name="Controllers" expanded="True" />
               <Node name="Data" expanded="True" />
               <Node name="Views" expanded="True">
                 <Node name="Shared" expanded="True" />
+              </Node>
+              <Node name="wwwroot" expanded="True">
+                <Node name="css" expanded="True">
+                  <Node name="site.css" selected="True" />
+                </Node>
               </Node>
             </Node>
           </Node>
